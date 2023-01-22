@@ -2,72 +2,73 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
-    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
-    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-    <title>Document</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	<title>Document</title>
 </head>
 
 <body>
 
-<!-- Start of first page -->
-<div data-role="page" id="foo">
+	<!-- Start of first page -->
+	<section data-role="page" id="foo">
 
-	<div data-role="header">
-        <a href="index.html" data-role="button" data-icon="plus">Add</a>
-		<h1>Contacts List</h1>
-	</div><!-- /header -->
+		<header data-role="header">
+			<a href="index.html" data-role="button" data-icon="plus">Add</a>
+			<h1>Contacts List</h1>
+		</header><!-- /header -->
 
-	<div data-role="content">
-		<p>I'm first in the source order so I'm shown as the page.</p>
-		<p>View internal page called <a href="#bar">bar</a></p>
-        <ul data-role="listview" data-inset="true" data-filter="true">
-	<li>
-        
-      
-        <a href="">
-            <img src="stock-image.jpg" alt="image-here" >
-            <h3>Broken Bells</h3>
-        </a>
-      
-    </li>
-    <li><a href="">
-        <img src="stock-image.jpg" />
-        <h3>Broken Bells</h3>
-       
-    </a></li>
-	<li><a href="">Hamza</a></li>
-	<li><a href="">Hassan</a></li>
-	<li><a href="">Abdullah Khamis  </a></li>
-	<li><a href="">Ferrari</a></li>
-</ul>
-	</div><!-- /content -->
-
-	<div data-role="footer">
-		<h4>Page Footer</h4>
-	</div><!-- /footer -->
-</div><!-- /page -->
+		<div data-role="content">
+			<p>I'm first in the source order so I'm shown as the page.</p>
+			<p>View internal page called <a href="#bar">bar</a></p>
+			<ul data-role="listview" data-inset="true" data-filter="true">
+				<li>
 
 
-<!-- Start of second page -->
-<div data-role="page" id="bar">
+					<a href="">
+						<img src="stock-image.jpg" alt="image-here">
+						<h3>Broken Bells</h3>
+					</a>
 
-	<div data-role="header">
-		<h1>Bar</h1>
-	</div><!-- /header -->
+				</li>
+				<li><a href="">
+						<img src="stock-image.jpg" />
+						<h3>Broken Bells</h3>
 
-	<div data-role="content">
-		<p>I'm the second in the source order so I'm hidden when the page loads. I'm just shown if a link that references my id is beeing clicked.</p>
-		<p><a href="#foo">Back to foo</a></p>
-	</div><!-- /content -->
+					</a></li>
+				<li><a href="">Hamza</a></li>
+				<li><a href="">Hassan</a></li>
+				<li><a href="">Abdullah Khamis </a></li>
+				<li><a href="">Ferrari</a></li>
+			</ul>
+		</div><!-- /content -->
 
-	<div data-role="footer">
-		<h4>Page Footer</h4>
-	</div><!-- /footer -->
-</div><!-- /page -->
+		<footer data-role="footer">
+			<h4>Page Footer</h4>
+		</footer><!-- /footer -->
+	</section><!-- /page -->
+
+
+	<!-- Start of second page -->
+	<div data-role="page" id="bar">
+
+		<div data-role="header">
+			<h1>Bar</h1>
+		</div><!-- /header -->
+
+		<div data-role="content">
+			<p>I'm the second in the source order so I'm hidden when the page loads. I'm just shown if a link that
+				references my id is beeing clicked.</p>
+			<p><a href="#foo">Back to foo</a></p>
+		</div><!-- /content -->
+
+		<div data-role="footer">
+			<h4>Page Footer</h4>
+		</div><!-- /footer -->
+	</div><!-- /page -->
 </body>
 
 </html>
