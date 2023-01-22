@@ -17,13 +17,14 @@
 
 <body>
 	<!-- Start of first page -->
-	<section data-role="page" id="contacts">
+	<section data-role="page" id="contacts" data-overlay-theme="b" data-theme="b">
 		<header data-role="header" class="contacts">
-			<a href="#DialogBox" data-type="button" data-icon="plus" data-rel="popup">Add</a>
+			<a href="#DialogBox"  data-icon="plus" data-rel="popup">Add</a>
+
 			<section data-position-to="window" data-role="popup" data-dialog="true" id="DialogBox"
-				data-overlay-theme="a" data-theme="a" data-dismissible="false" style="width: 500px;">
+				data-overlay-theme="b" data-theme="b" style="width: 500px;">
 				<main style="padding:10px 20px;">
-					<header data-role="header">
+					<header data-role="header" data-add-back-btn="true">
 						<a href="#contacts" data-theme="a" data-icon="carat-l">Back</a>
 						<h3>New Contact</h3>
 					</header>
