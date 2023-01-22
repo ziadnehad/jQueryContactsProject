@@ -21,7 +21,7 @@
     <div data-role="page" id="contacts">
 
         <div data-role="header" class="contacts">
-            <a href="index.html" data-role="button" data-icon="plus">Add</a>
+            <a href="#DialogBox" data-role="button" data-icon="plus">Add</a>
             <h1>Contacts List</h1>
         </div><!-- /header -->
 
@@ -73,10 +73,50 @@
             <p><a href="#foo">Back to foo</a></p>
         </div><!-- /content -->
 
-        <div data-role="footer">
-            <h4>Page Footer</h4>
-        </div><!-- /footer -->
-    </div><!-- /page -->
+		<div data-role="footer">
+			<h4>Page Footer</h4>
+		</div><!-- /footer -->
+	</div><!-- /page -->
+
+	<section data-role="popup" id="DialogBox" data-overlay-theme="b" data-theme="b" data-dismissible="false"
+		style="max-width:400px;">
+		<main style="padding:10px 20px;">
+			<header data-role="header">
+				<a href="#foo" data-theme="a" data-icon="carat-l">Back</a>
+				<h3>New Contact</h3>
+			</header>
+			<form>
+				<label for="textinput-1">Name:</label>
+				<input type="text" name="textinput-1" id="textinput-1" placeholder="Text input" value="">
+
+				<label for="tel">Tel:</label>
+				<input type="tel" name="tel" id="tel" value="">
+
+				<label for="email">Tel:</label>
+				<input type="email" name="email" id="email" value="">
+				
+				<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+					<legend>Radio buttons, mini, horizontal controlgroup:</legend>
+					<input type="radio" name="radio-choice-b" id="radio-choice-c" value="list" checked="checked">
+					<label for="radio-choice-c">List</label>
+					<input type="radio" name="radio-choice-b" id="radio-choice-d" value="grid">
+					<label for="radio-choice-d">Grid</label>
+					<input type="radio" name="radio-choice-b" id="radio-choice-e" value="gallery">
+					<label for="radio-choice-e">Gallery</label>
+					</fieldset>
+
+
+
+				<div>
+					<a href="#"><input type="button" data-theme="a" data-icon="check" id="AddContact"
+							value="Add Contact"></a>
+					<a href="#"><input type="button" data-theme="a" data-icon="delete" id="deleteContact"
+							value="delete Contact"></a>
+				</div>
+			</form>
+		</main>
+	</section>
+
 </body>
 
 </html>
