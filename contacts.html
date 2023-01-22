@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 	<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
 	<link rel="stylesheet" href="themes/mytheme.min.css" />
 	<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
@@ -30,13 +28,10 @@
 					<form>
 						<label for="textinput-1">Name:</label>
 						<input type="text" name="textinput-1" id="textinput-1" placeholder="Text input" value="">
-
 						<label for="tel">Tel:</label>
 						<input type="tel" name="tel" id="tel" value="">
-
 						<label for="email">email:</label>
 						<input type="email" name="email" id="email" value="">
-
 						<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
 							<legend>Gender:</legend>
 							<input type="radio" name="radio-choice" id="radio-choice-a" value="list" checked="checked">
@@ -44,7 +39,6 @@
 							<input type="radio" name="radio-choice" id="radio-choice-b" value="grid">
 							<label for="radio-choice-b">Female</label>
 						</fieldset>
-
 						<div>
 							<a href="#" data-role="button" data-theme="a" data-icon="check" id="AddContact"
 								value="Add Contact">Add Contact</a>
@@ -53,7 +47,6 @@
 						</div>
 					</form>
 				</main>
-
 				<footer data-role="footer">
 					<h3>Contacts List</h3>
 				</footer>
@@ -63,118 +56,140 @@
 		<content>
 			<ul data-role="listview" data-inset="true" data-filter="true">
 				<li>
-					<a href="#form1" data-rel="popup"><img src="ziad.jpg">
+					<a href="#form1" data-rel="page"><img src="ziad.jpg">
 						<h2>Ziad Nehad</h2>
 					</a>
 					<a href="" data-rel="popup" data-icon="phone" data-position-to="window" data-transition="pop"></a>
-					<section data-role="popup" id="form1" style="width: 400;height: 400;">
-						<header data-role="header">
-							<a href="#contacts" data-role="button" data-icon="carat-l">Back</a>
-							<h1>ziad</h1>
-						</header>
-						<content data-role="content">
-				<li><a href="">
-						<img src="ziad.jpg" style="width:200px;height: 200px;" />
-					</a>
 				</li>
-				<section style="display: flex;">
-					<a href="" data-role="button" data-icon="minus" style="width:50px;height:40px;"> </a>
-					<a href="" data-role="button" data-icon="gear" style="width:50px;height:40px;"> </a>
-					<a href="#popupBasic" data-role="button" data-icon="delete" style="width:50px;height:40px;"></a>
-				</section>
+				<li>
+					<a href="#form2" data-rel="page"><img src="hassan.png">
+						<h2>Hassan Al Sherif</h2>
+					</a>
+					<a href="" data-rel="page" data-icon="phone" data-position-to="window" data-transition="pop"></a>
+				</li>
+				<li>
+					<a href="#form3" data-rel="page"><img src="khamis.png">
+						<h2>Abdullah Khamis</h2>
+					</a>
+					<a href="" data-rel="page" data-icon="phone" data-position-to="window" data-transition="pop"></a>
+				</li>
+				<li>
+					<a href="#form4" data-rel="page"><img src="hamza.png">
+						<h2>Hamza Alaa</h2>
+					</a>
+					<a href="" data-rel="page" data-icon="phone" data-position-to="window" data-transition="pop"></a>
+				</li>
+			</ul>
+		</content>
+	</section>
+
+	<section data-role="page" id="form1" style="width: 400;height: 400;">
+		<header data-role="header">
+			<a href="#contacts" data-role="button" data-icon="carat-l">Back</a>
+			<h1>ziad</h1>
+		</header>
+		<content data-role="content">
+			<li><a href="">
+					<img src="ziad.jpg" style="width:200px;height: 200px;" />
+				</a>
+			</li>
+			<section style="display: flex;">
+				<a href="" data-role="button" data-icon="minus" style="width:50px;height:40px;"> </a>
+				<a href="" data-role="button" data-icon="gear" style="width:50px;height:40px;"> </a>
+				<a href="#confirmation" data-role="button" data-rel="popup" data-icon="delete"
+					style="width:50px;height:40px;"></a>
+			</section>
+			<section id="confirmation" data-dismissible="true" data-position="window" data-role="popup">
+				<h3>Are You Sure You Want to Delete</h3>
+				<a data-role="button" href="">Yes</a>
+				<a data-role="button" href="">No</a>
+			</section>
 		</content>
 		<div data-role="footer">
 			<h4>contacts</h4>
 		</div>
 	</section>
-	</li>
-	<li>
-		<a href="#form2" data-rel="popup"><img src="hassan.png">
-			<h2>Hassan Al Sherif</h2>
-		</a>
-		<a href="" data-rel="popup" data-icon="phone" data-position-to="window" data-transition="pop"></a>
-		<section data-role="popup" id="form2" style="width: 400;height: 400;">
-			<header data-role="header">
-				<a href="#contacts" data-role="button" data-icon="carat-l">Back</a>
-				<h1>Hassan</h1>
-			</header>
-			<content data-role="content">
-				<img src="hassan.png" style="width:200px;height: 200px;" />
-				<section style="display: flex;">
-					<a href="" data-role="button" data-icon="minus" style="width:50px;height:40px;"> </a>
-					<a href="" data-role="button" data-icon="gear" style="width:50px;height:40px;"> </a>
-					<a href="#confirmDelete" data-role="button" data-rel="popup" data-icon="delete"
-						style="width:50px;height:40px;"></a>
-					<section id="confirmDelete" data-role="popup" style="width: 100px; height: 80px;">
-						<a href="" data-role="button">Yes</a>
-						<a href="" data-role="button">NO</a>
-					</section>
-				</section>
-			</content>
-			<div data-role="footer">
-				<h4>contacts</h4>
-			</div>
-		</section>
 
-	</li>
-	<li>
-		<a href="#form3" data-rel="popup"><img src="khamis.png">
-			<h2>Abdullah Khamis</h2>
-		</a>
-		<a href="" data-rel="popup" data-icon="phone" data-position-to="window" data-transition="pop"></a>
-		<section data-role="popup" id="form3" style="width: 400;height: 400;">
-			<div data-role="header">
-				<a href="#contacts" data-role="button" data-icon="carat-l">Back</a>
-				<h1>Abdullah Khamis</h1>
-			</div>
-			<div data-role="content">
-	<li><a href="">
-			<img src="khamis.png" style="width:200px;height: 200px;" />
-		</a>
-	</li>
-	<div style="display: flex;">
-		<a href="" data-role="button" data-icon="minus" style="width:50px;height:40px;"> </a>
-		<a href="" data-role="button" data-icon="gear" style="width:50px;height:40px;"> </a>
-		<a href="#popupBasic" data-role="button" data-icon="delete" style="width:50px;height:40px;"></a>
-	</div>
-	</div>
-	<div data-role="footer">
-		<h4>contacts</h4>
-	</div>
+	<section data-role="page" id="form2" style="width: 400;height: 400;">
+		<header data-role="header">
+			<a href="#contacts" data-role="button" data-icon="carat-l">Back</a>
+			<h1>Hassan</h1>
+		</header>
+		<content data-role="content">
+			<img src="hassan.png" style="width:200px;height: 200px;" />
+			<section style="display: flex;">
+				<a href="" data-role="button" data-icon="minus" style="width:50px;height:40px;"> </a>
+				<a href="" data-role="button" data-icon="gear" style="width:50px;height:40px;"> </a>
+				<a href="#confirmation2" data-role="button" data-rel="popup" data-icon="delete"
+					style="width:50px;height:40px;"></a>
+			</section>
+			<section id="confirmation2" data-dismissible="true" data-position="window" data-role="popup">
+				<h3>Are You Sure You Want to Delete </h3>
+				<a data-role="button" href="">Yes</a>
+				<a data-role="button" href="">No</a>
+			</section>
+		</content>
+		<div data-role="footer">
+			<h4>contacts</h4>
+		</div>
+	</section>
 
-	</section>
-	</li>
-	<li>
-		<a href="#form4" data-rel="popup"><img src="hamza.png">
-			<h2>Hamza Alaa</h2>
-		</a>
-		<a href="" data-rel="popup" data-icon="phone" data-position-to="window" data-transition="pop"></a>
-		<section data-role="popup" id="form4" style="width: 400;height: 400;">
-			<header data-role="header">
-				<a href="#contacts" data-role="button" data-icon="carat-l">Back</a>
-				<h1>Hamza Alaa</h1>
-			</header>
-			<content data-role="content">
-	<li><a href="">
-			<img src="hamza.png" style="width:200px;height: 200px;" />
-		</a>
-	</li>
-	<section style="display: flex;">
-		<a href="" data-role="button" data-icon="minus" style="width:50px;height:40px;"> </a>
-		<a href="" data-role="button" data-icon="gear" style="width:50px;height:40px;"> </a>
-		<a href="#popupBasic" data-role="button" data-icon="delete" style="width:50px;height:40px;"></a>
-	</section>
-	</content>
-	<footer data-role="footer">
-		<h4>contacts</h4>
-	</footer>
+	<section data-role="page" id="form3" style="width: 400;height: 400;">
+		<div data-role="header">
+			<a href="#contacts" data-role="button" data-icon="carat-l">Back</a>
+			<h1>Abdullah Khamis</h1>
+		</div>
+		<content data-role="content">
+			<li><a href="">
+					<img src="khamis.png" style="width:200px;height: 200px;" />
+				</a>
+			</li>
+			<section style="display: flex;">
+				<a href="" data-role="button" data-icon="minus" style="width:50px;height:40px;"> </a>
+				<a href="" data-role="button" data-icon="gear" style="width:50px;height:40px;"> </a>
+				<a href="#confirmation3" data-rel="popup" data-role="button" data-icon="delete"
+					style="width:50px;height:40px;"></a>
+			</section>
+			<section id="confirmation3" data-dismissible="true" data-position="window" data-role="popup">
+				<h3>Are You Sure You Want to Delete </h3>
+				<a data-role="button" href="">Yes</a>
+				<a data-role="button" href="">No</a>
+			</section>
+		</content>
+		<footer data-role="footer">
+			<h4>contacts</h4>
+		</footer>
 
 	</section>
 
-	</li>
-	</ul>
-	</content>
+	<section data-role="page" id="form4" style="width: 400;height: 400;">
+		<header data-role="header">
+			<a href="#contacts" data-role="button" data-icon="carat-l">Back</a>
+			<h1>Hamza Alaa</h1>
+		</header>
+		<content data-role="content">
+			<li><a href="">
+					<img src="hamza.png" style="width:200px;height: 200px;" />
+				</a>
+			</li>
+			<section style="display: flex;">
+				<a href="" data-role="button" data-icon="minus" style="width:50px;height:40px;"> </a>
+				<a href="" data-role="button" data-icon="gear" style="width:50px;height:40px;"> </a>
+				<a href="#confirmation4" data-role="button" data-rel="popup" data-icon="delete"
+					style="width:50px;height:40px;"></a>
+			</section>
+			<section id="confirmation4" data-dismissible="true" data-position="window" data-role="popup">
+				<h3>Are You Sure You Want to Delete </h3>
+				<a data-role="button" href="">Yes</a>
+				<a data-role="button" href="">No</a>
+			</section>
+		</content>
+		<footer data-role="footer">
+			<h4>contacts</h4>
+		</footer>
+
 	</section>
+
 </body>
 
 </html>
