@@ -16,7 +16,7 @@
 
 <body>
 	<!-- Start of first page -->
-	<section data-role="page" name="contacts" id="contacts" data-overlay-theme="b" data-theme="b">
+	<section data-role="page" name="contacts" id="contacts" data-overlay-theme="b" data-theme="a">
 		<header data-role="header" class="contacts">
 			<a href="#DialogBox" data-icon="plus" data-rel="popup">Add</a>
 
@@ -56,222 +56,43 @@
 			<h1>Contacts List</h1>
 		</header><!-- /header -->
 		<content>
-			<ul data-role="listview" data-inset="true" data-filter="true">
-				<li>
-					<a href="#form1" data-rel="page"><img src="ziad.jpg">
-						<h2>Ziad Nehad</h2>
-					</a>
-					<a href="tel:012" data-rel="popup" data-icon="phone" data-position-to="window" data-transition="pop"></a>
-				</li>
-				<li>
-					<a href="#form2" data-rel="page"><img src="hassan.png">
-						<h2>Hassan Al Sherif</h2>
-					</a>
-					<a href="tel:012" data-rel="page" data-icon="phone" data-position-to="window" data-transition="pop"></a>
-				</li>
-				<li>
-					<a href="#form3" data-rel="page"><img src="khamis.png">
-						<h2>Abdullah Khamis</h2>
-					</a>
-					<a href="tel:012" data-rel="page" data-icon="phone" data-position-to="window" data-transition="pop"></a>
-				</li>
-				<li>
-					<a href="#form4" data-rel="page"><img src="hamza.png">
-						<h2>Hamza Alaa</h2>
-					</a>
-					<a href="tel:012" data-rel="page" data-icon="phone" data-position-to="window" data-transition="pop"></a>
-				</li>
+			<ul data-split-icon="phone" data-split-theme="b" data-theme="b" data-role="listview"
+			data-inset="true" data-filter="true" data-filter-placeholder="Search for contact"
+			data-filter-theme="a" id="list1" >
+				
 			</ul>
 		</content>
 	</section>
 
-	<section data-role="page"  id="form1">
-		<header data-role="header">
+	<section data-role="page"  id="contact_page">
+		<header data-role="header" data-position="fixed">
 			<a href="#contacts" data-role="button" data-icon="carat-l">Back</a>
-			<h1>Ziad Nehad</h1>
+			<h1>  </h1>
 		</header>
-		<content data-role="content" style="margin-left: 40%;">
-			<img src="ziad.jpg" style="width:300px;height: 300px;" />
-			<details id="form01" style="width:300px;height: 300px; margin-left: 40%; margin-bottom: 50px;" 
-			data-position-to="window"  data-dialog="true" >
-			<form >
-				<label for="textinput-1">Name:</label>
-				<input type="text" name="textinput-1" id="textinput-1" placeholder="Text input" value="Ziad Nehad">
-				<label for="tel">Tel:</label>
-				<input type="tel" name="tel" id="tel" value="01234567891">
-				<label for="email">email:</label>
-				<input type="email" name="email" id="email" value="ziad@gmail.com">
-				<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
-					<legend>Gender:</legend>
-					<input type="radio" name="radio-choice" id="radio-choice-a" value="Male" checked="checked">
-					<label for="radio-choice-a">Male</label>
-					<input type="radio" name="radio-choice" id="radio-choice-b" >
-					<label for="radio-choice-b">Female</label>
-				</fieldset>
+		<content data-role="content" style="margin-left: 40%;" id="contact_details">
 
-			</form>
-		</details>
-
-			<section style="display: flex;margin-left: 40%;">
-				<a href="#confirmation" data-role="button" data-rel="popup" data-icon="delete"
-					style="width:50px;height:40px;"></a>
-				<section id="confirmation" data-position="window" data-role="popup">
-					<h3>Are You Sure You Want to Delete</h3>
-					<a data-role="button" href="">Yes</a>
-					<a data-role="button" href="">No</a>
-				</section>
-
-				<a href="#form01" id="anchor1" data-role="button" data-icon="edit" style="width:50px;height:40px;"> </a>
-
-				
-
-				<a href="tel:012" data-role="button" data-icon="phone" style="width:50px;height:40px;"> </a>
-
-			</section>
 
 		</content>
-		<div data-role="footer">
-			<h4>contacts</h4>
-		</div>
-	</section>
 
-	<section data-role="page" id="form2" style="width: 400;height: 400;">
-		<header data-role="header">
-			<a href="#contacts" data-role="button" data-icon="carat-l">Back</a>
-			<h1>Hassan Al-sharif</h1>
-		</header>
-		<content data-role="content" style="margin-left: 40%;">
-			<img src="hassan.png" style="width:300px;height: 300px;" />
-			<details id="form02" style="width:300px;height: 300px; margin-left: 40%; margin-bottom: 50px;" 
-				data-position-to="window"  data-dialog="true" >
-				<form >
-					<label for="textinput-1">Name:</label>
-					<input type="text" name="textinput-1" id="textinput-1" placeholder="Text input" value="Hassan Al-sharif">
-					<label for="tel">Tel:</label>
-					<input type="tel" name="tel" id="tel" value="01234567891">
-					<label for="email">email:</label>
-					<input type="email" name="email" id="email" value="Hassan@gmail.com">
-					<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
-						<legend>Gender:</legend>
-						<input type="radio" name="radio-choice" id="radio-choice-a" value="Male" checked="checked">
-						<label for="radio-choice-a">Male</label>
-						<input type="radio" name="radio-choice" id="radio-choice-b" >
-						<label for="radio-choice-b">Female</label>
-					</fieldset>
-	
-				</form>
-			</details>
-			<section style="display: flex;margin-left: 40%;">
-				<a href="#confirmation2" data-role="button" data-rel="popup" data-icon="delete"
-					style="width:50px;height:40px;"></a>
-				<section id="confirmation2" data-position="window" data-role="popup">
-					<h3>Are You Sure You Want to Delete </h3>
-					<a data-role="button" href="">Yes</a>
-					<a data-role="button" href="">No</a>
-				</section>
-				<a href="#form02" id="anchor2" data-role="button" data-icon="edit" style="width:50px;height:40px;"> </a>
-				<a href="tel:012" data-role="button" data-icon="phone" style="width:50px;height:40px;"> </a>
+		<section style="display: flex;margin-left: 40%;">
+			<a href="#confirmation2" data-role="button" data-rel="popup" data-icon="delete"
+				style="width:50px;height:40px;"></a>
+			<section id="confirmation2" data-position="window" data-role="popup">
+				<h3>Are You Sure You Want to Delete </h3>
+				<a data-role="button" href="">Yes</a>
+				<a data-role="button" href="">No</a>
 			</section>
+			<a href="#form02" id="anchor2" data-role="button" data-icon="edit" style="width:50px;height:40px;"> </a>
+			<a href="tel:012" data-role="button" data-icon="phone" style="width:50px;height:40px;"> </a>
+		</section>
 
-		</content>
-		<div data-role="footer">
-			<h4>contacts</h4>
-		</div>
-	</section>
 
-	<section data-role="page" id="form3" style="width: 400;height: 400;">
-		<div data-role="header">
-			<a href="#contacts" data-role="button" data-icon="carat-l">Back</a>
-			<h1>Abdullah Khamis</h1>
-		</div>
-		<content data-role="content" style="margin-left: 40%;">
-			<img src="khamis.png" style="width:300px;height: 300px;" />
-
-			<details id="form03" style="width:300px;height: 300px; margin-left: 40%; margin-bottom: 50px;" 
-				data-position-to="window"  data-dialog="true" >
-				<form >
-					<label for="textinput-1">Name:</label>
-					<input type="text" name="textinput-1" id="textinput-1" placeholder="Text input" value="Abdullah Khamis">
-					<label for="tel">Tel:</label>
-					<input type="tel" name="tel" id="tel" value="01234567891">
-					<label for="email">email:</label>
-					<input type="email" name="email" id="email" value="Abdullah@gmail.com">
-					<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
-						<legend>Gender:</legend>
-						<input type="radio" name="radio-choice" id="radio-choice-a" value="Male" checked="checked">
-						<label for="radio-choice-a">Male</label>
-						<input type="radio" name="radio-choice" id="radio-choice-b" >
-						<label for="radio-choice-b">Female</label>
-					</fieldset>
-	
-				</form>
-			</details>
-			
-			<section style="display: flex;margin-left: 40%;">
-				<a href="#confirmation3" data-role="button" data-rel="popup" data-icon="delete"
-					style="width:50px;height:40px;"></a>
-					<section id="confirmation3" data-dismissible="true" data-position="window" data-role="popup">
-						<h3>Are You Sure You Want to Delete </h3>
-						<a data-role="button" href="">Yes</a>
-						<a data-role="button" href="">No</a>
-					</section>
-				<a href="#form03" id="anchor3" data-role="button" data-icon="edit" style="width:50px;height:40px;"> </a>
-				<a href="tel:012" data-role="button" data-icon="phone" style="width:50px;height:40px;"> </a>
-			</section>
-
-		</content>
-		<footer data-role="footer">
-			<h4>contacts</h4>
+		<footer data-role="footer"  data-position="fixed" >
+			<h4 >contacts</h4>
 		</footer>
-
 	</section>
 
-	<section data-role="page" id="form4" style="width: 400;height: 400;">
-		<header data-role="header">
-			<a href="#contacts" data-role="button" data-icon="carat-l">Back</a>
-			<h1>Hamza Alaa</h1>
-		</header>
-		<content data-role="content" style="margin-left: 40%;">
-			<img src="hamza.png" style="width:300px;height: 300px;" />
-
-			<details id="form04" style="width:300px;height: 300px; margin-left: 40%; margin-bottom: 50px;" 
-				data-position-to="window"  data-dialog="true" >
-				<form >
-					<label for="textinput-1">Name:</label>
-					<input type="text" name="textinput-1" id="textinput-1" placeholder="Text input" value="Hamza Alaa">
-					<label for="tel">Tel:</label>
-					<input type="tel" name="tel" id="tel" value="01234567891">
-					<label for="email">email:</label>
-					<input type="email" name="email" id="email" value="Hamza@gmail.com">
-					<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
-						<legend>Gender:</legend>
-						<input type="radio" name="radio-choice" id="radio-choice-a" value="Male" checked="checked">
-						<label for="radio-choice-a">Male</label>
-						<input type="radio" name="radio-choice" id="radio-choice-b" >
-						<label for="radio-choice-b">Female</label>
-					</fieldset>
-	
-				</form>
-			</details>
-
-			<section style="display: flex;margin-left: 40%;">
-				<a href="#confirmation4" data-role="button" data-rel="popup" data-icon="delete"
-					style="width:50px;height:40px;"></a>
-					<section id="confirmation4" data-position="window" data-role="popup">
-						<h3>Are You Sure You Want to Delete </h3>
-						<a data-role="button" href="">Yes</a>
-						<a data-role="button" href="">No</a>
-					</section>
-				<a href="#form04" id="anchor4" data-role="button" data-icon="edit" style="width:50px;height:40px;"> </a>
-				<a href="tel:012" data-role="button" data-icon="phone" style="width:50px;height:40px;"> </a>
-			</section>
-
-		</content>
-		<footer data-role="footer">
-			<h4>contacts</h4>
-		</footer>
-
-	</section>
+	<script src="script.js"></script>
 
 </body>
 
