@@ -1,9 +1,9 @@
-var contacts = [
-    { name: "Ziad Nehad", Number: "01123456789", Email: "Ziad@gmail.com", Gender: "male", image: "ziad.jpg" },
-    { name: "Hassan Al-Sharif", Number: "01123456789", Email: "Hassan@gmail.com", Gender: "male", image: "hassan.png" },
-    { name: "Abdullah Khames", Number: "01123456789", Email: "Abdullah@gmail.com", Gender: "male", image: "khamis.png" },
-    { name: "Hamza Alaa", Number: "01123456789", Email: "Hamza@gmail.com", Gender: "male", image: "hamza.png" }
-];
+// var contacts = [
+//     { name: "Ziad Nehad", Number: "01123456789", Email: "Ziad@gmail.com", Gender: "male", image: "ziad.jpg" },
+//     { name: "Hassan Al-Sharif", Number: "01123456789", Email: "Hassan@gmail.com", Gender: "male", image: "hassan.png" },
+//     { name: "Abdullah Khames", Number: "01123456789", Email: "Abdullah@gmail.com", Gender: "male", image: "khamis.png" },
+//     { name: "Hamza Alaa", Number: "01123456789", Email: "Hamza@gmail.com", Gender: "male", image: "hamza.png" }
+// ];
 
 var numberOfcontacts = contacts.length;
 
