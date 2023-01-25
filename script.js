@@ -8,7 +8,9 @@ var contacts = [
 var numberOfcontacts = contacts.length;
 
 function createListView() {
-    for (i = 0; i < numberOfcontacts; i++) {
+    // document.getElementById("list1").value = "";
+    $("#list1").empty();
+    for (i = 0; i < contacts.length; i++) {
         var fullName = contacts[i].name;
         var Numbers = contacts[i].Number;
         var imag = contacts[i].image;
@@ -17,7 +19,7 @@ function createListView() {
         if (imag == "") {
             imag = "photo_not_available_wide.png";
         }
-        
+
         $("#list1").append(`<li>
         <a href="#contact_page">
         <img src= ${imag}  width="307" height="240" alt="image">
@@ -28,7 +30,7 @@ function createListView() {
         <a href="tel:01126350544" id='phone'>  </a>
         </li>`);
 
-        $("#list1").listview("refresh");
+        $("#list1").listview().listview("refresh");
     }
 }
 
@@ -40,7 +42,7 @@ $(document).ready(function (e) {
 })
 
 
-$(document).on("click","#list1 li a",function(){
+$(document).on("click", "#list1 li a", function () {
     selectedIndex = $(this).closest("li").index();
     var currentImage = contacts[selectedIndex].image;
     var fullName = contacts[selectedIndex].name;
@@ -60,8 +62,22 @@ $(document).on("click","#list1 li a",function(){
 
 })
 
-function deleteArr(){
-    contacts.splice(selectedIndex,1);
-    console.log("done");
+function check() {
+    let temp = new Array();
+    for (let i = 0; i < contacts.length; i++) {
+        if (i != selectedIndex){
+            temp.push(contacts[i]);
+        } 
+        
+    }
+    contacts = new Array();
+    contacts = temp;
+}
+
+function deleteArr() {
+    check();
+    createListView();
+    $.mobile.changePage("#contacts");
+    console.log(contacts);
 }
 
