@@ -59,3 +59,9 @@ $(document).on("click","#list1 li a",function(){
     $("#contact_details").append(`<p style="color: orangered ;margin-left: 40%;">Gender : ${Gender} </p>`);
 
 })
+
+function deleteArr(){
+    contacts.splice(selectedIndex,1);
+    console.log("done");
+}
+
