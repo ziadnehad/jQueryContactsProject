@@ -84,7 +84,6 @@ $("#AddContact").click(function(){
 });
 
 
-// })
 
 function deleteArr(){
     contacts.splice(selectedIndex,1);
