@@ -84,3 +84,10 @@ $("#AddContact").click(function(){
 });
 
 
+// })
+
+function deleteArr(){
+    contacts.splice(selectedIndex,1);
+    console.log("done");
+}
+
