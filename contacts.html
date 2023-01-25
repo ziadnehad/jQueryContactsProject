@@ -20,7 +20,7 @@
 		<header data-role="header" class="contacts">
 			<a href="#DialogBox" data-icon="plus" data-rel="popup">Add</a>
 
-			<section id="DialogBox" data-position-to="window" data-role="popup" data-dialog="true" 
+			<content id="DialogBox" data-position-to="window" data-role="popup" data-dialog="true" 
 				data-overlay-theme="b" data-theme="b" style="width: 500px;">
 				<main style="padding:10px 20px;">
 					<header data-role="header" >
@@ -29,11 +29,14 @@
 					</header>
 					<form id="form">
 						<label for="textinput-1">Name:</label>
-						<input type="text" name="textinput-1" id="textinput-1" placeholder="Text input" value="">
+						<input type="text" name="textinput-1" id="textinput-1" placeholder="Text input" required >
 						<label for="tel">Tel:</label>
-						<input type="tel" name="tel" id="tel" value="">
+						<input type="tel" name="tel" id="tel" required>
 						<label for="email">email:</label>
 						<input type="email" name="email" id="email" value="">
+						<label for="profileimage">profile image</label>
+						<input type="file" name="profileimage" id="profileimage" value="">
+
 						<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
 							<legend>Gender:</legend>
 							<input type="radio" name="radio-choice" id="radio-choice-a" value="Male" checked="checked">
@@ -52,7 +55,7 @@
 				<footer data-role="footer">
 					<h3>Contacts List</h3>
 				</footer>
-			</section>
+			</content>
 			<h1>Contacts List</h1>
 		</header><!-- /header -->
 		<content>
