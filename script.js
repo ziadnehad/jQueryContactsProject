@@ -28,7 +28,9 @@ $(document).on("click","#list1 li a",function(){
 })
 
 function createListView() {
-    for (i = 0; i < numberOfcontacts; i++) {
+    // document.getElementById("list1").value = "";
+    $("#list1").empty();
+    for (i = 0; i < contacts.length; i++) {
         var fullName = contacts[i].name;
         var Numbers = contacts[i].Number;
         var imag = contacts[i].image;
@@ -37,7 +39,7 @@ function createListView() {
         if (imag == "") {
             imag = "photo_not_available_wide.png";
         }
-        
+
         $("#list1").append(`<li>
         <a href="#contact_page">
         <img src= ${imag}  width="307" height="240" alt="image">
@@ -49,6 +51,7 @@ function createListView() {
         </li>`);
 
         $("#list1").listview().listview("refresh");
+        $("#list1").listview().listview("refresh");
     }
 }
 
@@ -58,8 +61,6 @@ $(document).ready(function (e) {
 
 
 })
-
-
 
 $("#AddContact").click(function(){
     numberOfcontacts++;
@@ -77,16 +78,35 @@ $("#AddContact").click(function(){
     }
     else{
         alert("cannot be null");
+    }
+});
+
+
+function check() {
+    let temp = new Array();
+    for (let i = 0; i < contacts.length; i++) {
+        if (i != selectedIndex){
+            temp.push(contacts[i]);
+        } 
         
     }
  
 
-});
+};
 
 
 
 function deleteArr(){
     contacts.splice(selectedIndex,1);
     console.log("done");
+    contacts = new Array();
+    contacts = temp; 
+}
+
+function deleteArr() {
+    check();
+    createListView();
+    $.mobile.changePage("#contacts");
+    console.log(contacts);
 }
 
