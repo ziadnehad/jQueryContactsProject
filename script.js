@@ -112,3 +112,14 @@ function deleteArr() {
     console.log(contacts);
 }
 
+ $("#Edit").click(function(){ 
+    var phone =    document.getElementById("newData2");
+    var name = document.getElementById("newData1");
+ 
+    contacts[selectedIndex].Number =phone.value;
+    contacts[selectedIndex].name = name.value;
+    createListView();
+    $.mobile.changePage("#contacts");
+    console.log(contacts);
+ }
+ )

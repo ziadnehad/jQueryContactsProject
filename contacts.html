@@ -85,10 +85,23 @@
 				<a data-role="button" onclick="deleteArr()" href="">Yes</a>
 				<a data-role="button" href="">No</a>
 			</section>
-			<a href="#form02" id="anchor2" data-role="button" data-icon="edit" style="width:50px;height:40px;"> </a>
+			<a href="#confirmation22" data-role="button" data-rel="popup" data-icon="edit"
+				style="width:50px;height:40px;"></a>
+			<section id="confirmation22" data-position="window" data-role="popup" style="margin: auto;padding: 3%;">
+
+				<div data-role="fieldcontain" style="display: flex;">
+					<label for="name" style="margin: auto;" >Name: </label>
+					<input type="text" name="name"   value=""  id="newData1"/>
+				</div>	
+				<div data-role="fieldcontain" style="display: flex;">
+					<label for="name" style="margin: auto;">phone:</label>
+					<input type="text" name="name"  value=""  id="newData2"/>
+				</div>
+				<input type="button" value="Edit" id="Edit"/>			
+			</section>
 			<a href="tel:012" data-role="button" data-icon="phone" style="width:50px;height:40px;"> </a>
 		</section>
-
+       
 
 		<footer data-role="footer"  data-position="fixed" >
 			<h4 >contacts</h4>
