@@ -1,8 +1,8 @@
 var contacts = [
-    { name: "Ziad Nehad", Number: "01123456789", Email: "Ziad@gmail.com", Gender: "male", image: "ziad.jpg" },
-    { name: "Hassan Al-Sharif", Number: "01123456789", Email: "Hassan@gmail.com", Gender: "male", image: "hassan.png" },
-    { name: "Abdullah Khames", Number: "01123456789", Email: "Abdullah@gmail.com", Gender: "male", image: "khamis.png" },
-    { name: "Hamza Alaa", Number: "01123456789", Email: "Hamza@gmail.com", Gender: "male", image: "hamza.png" }
+    { name: "Ziad Nehad", Number: "01123456789", Email: "Ziad@gmail.com", Gender: "male", image: "./images/ziad.jpg" },
+    { name: "Hassan Al-Sharif", Number: "01123456789", Email: "Hassan@gmail.com", Gender: "male", image: "./images/hassan.png" },
+    { name: "Abdullah Khames", Number: "01123456789", Email: "Abdullah@gmail.com", Gender: "male", image: "./images/khamis.png" },
+    { name: "Hamza Alaa", Number: "01123456789", Email: "Hamza@gmail.com", Gender: "male", image: "./images/hamza.png" }
 ];
 
 var numberOfcontacts = contacts.length;
@@ -14,7 +14,7 @@ $(document).on("click","#list1 li a",function(){
     var Email = contacts[selectedIndex].Email;
     var Gender = contacts[selectedIndex].Gender;
     if (currentImage == "") {
-        currentImage = "photo_not_available_wide.png";
+        currentImage = "./images/photo_not_available_wide.png";
     }
 
     $("section header h1").text(fullName);
@@ -37,7 +37,7 @@ function createListView() {
         var Emails = contacts[i].Email;
 
         if (imag == "") {
-            imag = "photo_not_available_wide.png";
+            imag = "./images/photo_not_available_wide.png";
         }
 
         $("#list1").append(`<li>
@@ -71,10 +71,15 @@ $("#AddContact").click(function(){
     var fEmail = $("#email").val();
     var fGender = $('input[name="radio-choice"]:checked').val();
     var fimage = $("#profileimage").val();
+    console.log(fimage);
+
+
     if(fNumber != "" && fname!= ""){
     contacts.push({name :fname , Number:fNumber , Email :fEmail , Gender:fGender ,image:fimage })
     $("#list1").empty();
     createListView();
+    $.mobile.changePage("#contacts");
+
     }
     else{
         alert("cannot be null");
