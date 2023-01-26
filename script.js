@@ -87,24 +87,21 @@ function check() {
     for (let i = 0; i < contacts.length; i++) {
         if (i != selectedIndex){
             temp.push(contacts[i]);
-        } 
+        }
         
     }
- 
-
+    return temp ;
 };
 
-
-
-function deleteArr(){
-    contacts.splice(selectedIndex,1);
-    console.log("done");
-    contacts = new Array();
-    contacts = temp; 
-}
+// function deleteArr(){
+//     contacts.splice(selectedIndex,1);
+//     console.log("done");
+//     contacts = new Array();
+//     contacts = temp; 
+// }
 
 function deleteArr() {
-    check();
+ contacts =    check();
     createListView();
     $.mobile.changePage("#contacts");
     console.log(contacts);
